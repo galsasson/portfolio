@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-color:#4c4c4c;
+}
+
+div#center_wrapper_div {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width:900px;
+}
+
+div#main_div {
+/*	margin-top:5%;
+	margin-left: auto;
+	margin-right: auto; */
+	margin-bottom: 5%;
+	width:900px;
+	float:left;
+	background-color:#f4f4f4;
+	height: 100%;
+	text-align:left;
+}
+
+div#title_div {
+	float:left;
+	width:900px;
+	
+	border-bottom-color:#4c4c4c;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+}
+
+img#corner {
+	float:left;
+}
+
+img#gal_img {
+	padding-top:20px;
+	padding-left:0px;
+	padding-bottom:15px;
+}
+
+div#content_div {
+	float:left;
+	width:610px;
+	height:100%;
+	margin: 0px 0px 0px 0px;
+	padding:0px 20px 20px 20px;
+	color:#4F5456;
+	font-family:"Arial";
+	font-size:12px;
+		
+	border-left-color:#4c4c4c;
+	border-left-style:solid;
+	border-left-width:1px;
+}
+
+div#nav_bar_div {
+	float:left;
+	width:200px;
+	height:100%;
+	padding-left:0px;
+	padding-right:1px;
+//	background-color:#d0d0d0;
+}
+
+div#project_sub2_div {
+	vertical-align:top;
+	color:#ACB4B7;
+	font-family:Arial;
+	font-size:13px;
+	margin-left:12px;
+	margin-right:12px;
+	
+}
+
+a.project {
+  display: block;
+  color:#4F5456;
+  font-family:Arial;
+  font-size:15px;
+  text-decoration: none;
+  margin-top:20px;
+  margin-left:10px;
+  margin-bottom:5px; 
+}
+
+a.project:hover {
+	text-decoration:underline;
+}
+
+h1 {
+	font-family:"Arial";
+	font-size:20px;
+	color:#4F5456;
+/*	background-color:#4F5456; */
+}
+
+h2 {
+	font-family:"Arial";
+	font-size:16px;
+	color:#ACB4B7;
+/*	background-color:#4F5456; */
+}
+
+h3 {
+	font-family:"Arial";
+	font-size:14px;
+	color:#5F6466;
+}
+
+h5 {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 40px;
+	padding: 4px 0px 4px 10px;
+	font-style:normal;
+	text-decoration:none;
+	font-weight:100;
+	font-family:"Arial";
+	font-size:14px;
+	background-color:#4F5456;
+	color:#ACB4B7
+}
+
+canvas.photo_gallery {
+	position:relative;
+}
+
+a {
+	color:#eda60d;
+	text-decoration:none;
+}
+
+ul {
+	margin-top:3px;
+}
+
+div.processing_sketch {
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	background-color: #3d3d3d;
+}
+
+
