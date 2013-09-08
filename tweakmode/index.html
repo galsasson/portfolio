@@ -22,8 +22,133 @@
 <div id="content_div">
 <h1>Tweak Mode</h1>
 <br />
+<p>
+Tweak Mode is a mode of Processing (<a href="http://processing.org">processing.org</a>) that allows tweaking hard-coded numbers in the code while the sketch is running and seeing the result in real time.<br />
+<br />
+This video will give you a feeling of what it is like:
+<iframe src="//player.vimeo.com/video/74028935?portrait=0" width="550" height="309" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</p>
 
+<p>
+ When a sketch is being executed in tweak mode, all hard-coded numbers become interactive and can be modified by clicking and dragging to the left or right. When a value change the PDE will update the running sketch with the new value and the result will be visible immediately. This mode is useful if you want to refine a certain feature/color/behaviour in your sketch, if you want to experiment freely with numbers, or if you try to understand someone else's code. other uses are welcome.
+</p>
+<h2>Installing tweak mode</h2>
+<p>
+Launch Processing. The current mode always show in the top-right corner of the editor. click on the current mode and click "Add Mode...". The modes list will show up, select "Tweak Mode" and install.<br />
+<br />
+<b>Tweak mode depends on "oscP5" library and will complain if you don't have it installed. Go ahead and install this library by going to the "Sketch" menu. click on "Import Library..." --> "Add Library..." and select "oscP5" from the list.</b>
+</p>
+<br />
+<h2>Using tweak mode</h2>
+<p>
+Basically there is nothing special you need to do, tweak mode will automatically make all your hard-coded numbers modifiable when you run a sketch. You can go ahead and load some of your favorite Processing examples and tweak them. Having said that, there are number of key concepts to understand about how tweak mode operates so you can make the best out of it.
+<h3><li>Scope of change</li></h3>
+<div style="margin-left:20px;">
+Without going into too much detail of how tweak mode operates internally, you should remember that changing a number will have effect only if the tweaked code will be executed in the future.<br />
+For example, take the following code:<br />
 
+<pre><code>void setup()
+{
+  size(200, 200);
+  background(20);
+}
+
+void draw()
+{
+  fill(100, 0, 0);
+  ellipse(100, 100, 50, 50);
+}
+</code></pre>
+
+In this code, changing the values of 'size(...)' and 'background(...)' functions will have no effect while the sketch is running because these lines of code happened once on setup and will never be executed again during the sketch life. On the contrary, changing the values of fill() and ellipse() will have effect because 'draw' is executed over and over again.<br />
+<br />
+The same principle applies to global variables, for example:
+
+<pre><code>int CIRCLE_SIZE = 50;
+
+void setup()
+{
+  size(200, 200);
+  background(20);
+}
+
+void draw()
+{
+  int red = 100;
+  fill(red, 0, 0);
+  ellipse(100, 100, CIRCLE_SIZE, CIRCLE_SIZE);
+}
+</code></pre>
+<p>In this case, changing the value assigned to CIRCLE_SIZE (50) will have no effect because the assignment of the value '50' to the variable CIRCLE_SIZE happened only once during the sketch life, so the value of CIRCLE_SIZE will remain the same even if the assigned value is changed. On the contrary, changing the assigned value of the variable 'red' (100) will have the expected effect because this assignment happens every draw.</p>
+<p>A simple solution to the problem with the global variables is to reassign values you wish to tweak in the draw function. For example, the following draw function will elliminate the issue we had with the size of the ellipse in the previous code.
+</p>
+<pre><code>void draw()
+{
+  CIRCLE_SIZE = 50;
+  int red = 100;
+  fill(red, 0, 0);
+  ellipse(100, 100, CIRCLE_SIZE, CIRCLE_SIZE);
+}
+</code></pre>
+<p>Adding the line 'CIRCLE_SIZE = 50;' to the top of the draw function made it possible to tweak this number and control also the size of the circle in real time.</p>
+</div>
+
+<h3><li>Precision of change</li></h3>
+<div style="margin-left:20px;">
+When you change a value of a number by dragging left or right, the value will change in units that are determined by the number of digits after the decimal point.<br />
+The following code will explain what I just tried to say:
+<pre><code>
+int red = 100;       // change with precision of 1
+float xPos = 50.0;   // change with precision of 0.1      
+float yPos = 50.00;  // change with precision of 0.01
+</code></pre>
+If you need more precision add more digits after the decimal point.
+</div>
+
+<h3><li>Colors</li></h3>
+<div style="margin-left:20px;">
+Tweak mode will do its best to find color operations in your code and will display a color selector for your convenience. In case you use <b>more than one</b> color-mode (defined with the function 'colorMode(...)') in your sketch, tweak mode will not be able to understand the intended color due to color mode ambiguity. If this is the case in you sketch you can always use HEX or web-color syntax which does not depend on the current color-mode.<br />
+For example, use:
+<pre><code>fill(#ff00ff);   // OR
+fill(0xffff00ff);
+</code></pre>
+</div>
+
+<h3><li>Tweak only defined parameters</li></h3>
+<div style="margin-left:20px;">
+If you want to tweak only certain parameters in your sketch, you can add the comment "// tweak" on the same line that contains the values you wish to tweak, like in the following example:
+<pre><code>void setup()
+{
+  size(200, 200);
+}
+
+void draw()
+{
+  background(0);    // tweak
+  fill(255);        // tweak
+  
+  ellipse(100, 100, 50, 50);
+}
+</code></pre>
+With the above code, tweak mode will ignore all numbers in the sketch and allow tweaking only the background and fill colors.
+</div>
+</p>
+
+<br />
+<h2>Source Code</h2>
+<p>The source can be found in github: <a href="http://github.com/galsasson/tweakmode/">http://github.com/galsasson/tweakmode/</a><br />
+Please help by posting issues and bugs (or bug fixes!).
+</p>
+<h2>Acknowledgements</h2>
+<p>
+This work could not be posible without the tremendous guidance and help from my mentor Daniel Shiffman who supported me from the conception stages of this work. Thanks also to Manindra Moharana for the help along the way.
+</p>
+<p>
+This work is built uppon a number of projects:
+<li><a href="http://processing.org">Processing</a> - by Ben Fry and Casey Reas</li>
+<li><a href="http://www.sojamo.de/libraries/oscp5/">oscP5</a> - by Andreas Schlegel</li>
+<li><a href="http://www.illposed.com/software/javaosc.html">JavaOSC</a> - by Chandrasekhar Ramakrishnan</li>
+</p>
 
 </div>
 </div>
