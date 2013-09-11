@@ -8,6 +8,19 @@
 
 <script src="../photo_gallery.js"></script>
 
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3175251-2', 'galsasson.com');
+  ga('send', 'pageview');
+
+</script>
+<!-- Google Analytics End -->
+
 </head>
 
 <body>
@@ -25,16 +38,17 @@
 <p>
 Tweak Mode is a mode of Processing (<a href="http://processing.org">processing.org</a>) that allows tweaking hard-coded numbers in the code while the sketch is running and seeing the result in real time.<br />
 <br />
-This video will give you a feeling of what it is like:
+This video will give you a feeling of what it is like:<br /><br />
 <iframe src="//player.vimeo.com/video/74028935?portrait=0" width="550" height="309" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </p>
 
 <p>
+<br />
  When a sketch is being executed in tweak mode, all hard-coded numbers become interactive and can be modified by clicking and dragging to the left or right. When a value change, the PDE will update the running sketch with the new value and the result will be visible immediately. This mode is useful if you want to refine a certain feature/color/behaviour in your sketch, if you want to experiment freely with numbers, or if you try to understand someone else's code. other uses are welcome.
 </p>
 <h2>Installing tweak mode</h2>
 <p>
-Launch Processing. The current mode always show in the top-right corner of the editor. click on the current mode and click "Add Mode...". The modes list will show up, select "Tweak Mode" and install.<br />
+Launch Processing. The current mode always show in the top-right corner of the editor. click on the current mode and click "Add Mode...". The modes list will show up, select "Tweak Mode" and install. When you're done, restart Processing and switch to 'tweak' mode.<br />
 <br />
 <b>Tweak mode depends on "oscP5" library and will complain if you don't have it installed. Go ahead and install this library by going to the "Sketch" menu. click on "Import Library..." --> "Add Library..." and select "oscP5" from the list.</b>
 </p>
