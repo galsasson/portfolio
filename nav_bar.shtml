@@ -21,6 +21,11 @@
   Electronic puppet theater.
   </div>
 
+  <a class="project" href="/videoactive">VideoActive</a>
+  <div id="project_sub2_div">
+  Parametric Design online application.
+  </div>
+
   <a class="project" href="/echo_garden.html">Echo Garden</a>
   <div id="project_sub2_div">
   Humorous Interactive Musical Installation.

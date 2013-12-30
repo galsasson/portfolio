@@ -1,40 +1,59 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Parametric</title>
-    <script src="js/libs/jquery-1.10.2.min.js"></script>
-    <script src="js/libs/three.js"></script>
-    <script src="js/libs/RequestAnimationFrame.js"></script>
-    <script src="js/libs/OrbitControls.js"></script>
-    <script src="js/libs/dat.gui.js"></script>
-    <script src="js/libs/STLExporter.js"></script>
-    <script src="js/ResourceManager.js"></script>
-    <script src="js/ParametricApp.js"></script>
-    <script src="js/Room.js"></script>    
-    <script src="js/TestObject2.js"></script>
-    <script src="js/VideoScreen.js"></script>
-    <script src="js/Particle.js"></script>    
-    <script src="js/ShapeParticle.js"></script>    
-    <script src="js/RemoteControl.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Gal : portfolio</title>
+
+<link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
+
+<script src="../photo_gallery.js"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3175251-2', 'galsasson.com');
+  ga('send', 'pageview');
+
+</script>
+<!-- Google Analytics End -->
+
 </head>
-<body onLoad="onLoad();" style="overflow:hidden; width:100%; height:100%; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
-    <div id="container" style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
-    </div>
-    <div style="padding: 0px; margin: 0px; position: absolute; right: 40px; bottom: 20px;">
-        <p style="color: #bbb; font-size: 20px; font-family: 'Alegreya Sans SC', sans-serif;">VideoActive / Gal Sasson</p>
-    </div>
-    <!-- controls -->
-    <div style="padding: 0px; margin: 0px; position: absolute; left: 40px; bottom: 20px; width: 300px; color: #bbb; font-size: 16px; font-family: 'Alegreya Sans SC', sans-serif;">
-        <p>Controls:
-        <ul>
-        <li>Click on the remote control to select channel and turn on the TV.</li>
-        <li>Change camera view angle with 0-3 on your keyboard.</li>
-        <li>Reset object with 'r'.</li>
-        <li>Pause video with SPACE.</li>
-        </ul>
-        </p>
-    </div>
+
+<body>
+<div id="center_wrapper_div">
+<div id="main_div">
+
+<!--#include file="title.shtml" -->
+
+<!--#include file="nav_bar.shtml" -->
+
+
+<div id="content_div">
+<h1>VideoActive</h1>
+<br />
+<p>
+VideoActive is an interactive online parametric design app made for Parameteric Design course led by Marius Watz. Watch is live <a target="_blank" href="app.html">here</a>.<br />
+<a target="_blank" href="app.html"><img src="/img/videoactive1.jpg" /></a>
+</p>
+<p>
+While visiting in Italy a few years ago, I was in a vineyard where the vintner was playing J.S. Bach to his grapes with the intention that his grapes will resonate with the music in such a way that his wine will taste better or the vine will grow faster. In this work I try to recreate the process, producing parametric shapes instead of grapes.</p>
+<p>In this process, a sphere is placed in front of a screen, then a video is played to the sphere. The sphere starts to change its shape as a result of the unique motion in the video it watches. The result is 3D primitives that resonate with the videos they watch.
+</p>
+<p>
+The resulting shapes are 3D printable, here are some results:
+<img src="/img/videoactive_3dprint.jpg" />
+<img src="/img/videoactive_3dprint2.jpg" />
+</p>
+<p>
+This system is implemented in javascript and <a href="app.html" target="_blank">lives here</a>. I'm using <a href="http://threejs.org/" target="_blank">Three.js</a> to construct and render the interactive scene. While the video is playing an analysis is performed on the video frames, calculating the the motion in the frame. This motion is then mapped to different vertices on the 3D object. Its all about the mapping.
+</p>
+
+</div>
+</div>
+</div>
 </body>
 </html>
-
