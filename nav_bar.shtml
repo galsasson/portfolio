@@ -31,6 +31,11 @@
   Humorous Interactive Musical Installation.
   </div>
 
+  <a class="project" href="/flapchat">FlapChat</a>
+  <div id="project_sub2_div">
+  Interactive Video Chat
+  </div>
+
   <a class="project" href="/blow.html">Blow : UI Design</a>
   <div id="project_sub2_div">
   User Interface system for the armless.
