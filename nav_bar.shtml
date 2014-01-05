@@ -21,6 +21,11 @@
   Electronic puppet theater.
   </div>
 
+  <a class="project" href="/repaint">Re:Paint</a>
+  <div id="project_sub2_div">
+  Experiment with mechanical turk
+  </div>
+
   <a class="project" href="/videoactive">VideoActive</a>
   <div id="project_sub2_div">
   Parametric Design online application.
