@@ -34,6 +34,11 @@ div#title_div {
 	border-bottom-width:1px;
 }
 
+div#canvas {
+	background-color:#00000000;
+	position: fixed;
+}
+
 img#corner {
 	float:left;
 }
