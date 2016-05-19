@@ -1,21 +1,5 @@
-<!-- stem -->
- <script src="p5/libs/p5.js" type="text/javascript"></script>
- <script src="p5/libs/p5.dom.js" type="text/javascript"></script>
- <script src="p5/portfolio/stem.js" type="text/javascript"></script>
- <script src="p5/portfolio/sketch.js" type="text/javascript"></script>
-
 <div id="nav_bar_div">
   <h5>Projects</h5>
-
-<a class="project" href="/biodesign">Bio Design Studio</a>
-  <div id="project_sub2_div">
-    Interactive exhibit for The Tech, Museum of Innovation.
-  </div>
-
-<a class="project" href="/one-world-observatory">City Pulse</a>
-  <div id="project_sub2_div">
-  Digital concierge experience for the One World Observatory.
-  </div>
 
   <a class="project" href="/collections-table">Collections Table</a>
   <div id="project_sub2_div">
@@ -97,4 +81,3 @@
   <br />
 </div>
 
-<div id="canvas"> </div>
