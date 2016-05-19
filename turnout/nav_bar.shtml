@@ -1,35 +1,14 @@
-<!-- stem -->
- <script src="p5/libs/p5.js" type="text/javascript"></script>
- <script src="p5/libs/p5.dom.js" type="text/javascript"></script>
- <script src="p5/portfolio/stem.js" type="text/javascript"></script>
- <script src="p5/portfolio/sketch.js" type="text/javascript"></script>
-
 <div id="nav_bar_div">
   <h5>Projects</h5>
-
-<a class="project" href="/biodesign">Bio Design Studio</a>
-  <div id="project_sub2_div">
-    Interactive exhibit for The Tech, Museum of Innovation
-  </div>
-
-<a class="project" href="/one-world-observatory">City Pulse</a>
-  <div id="project_sub2_div">
-  Digital concierge experience for the One World Observatory
-  </div>
 
   <a class="project" href="/collections-table">Collections Table</a>
   <div id="project_sub2_div">
   Interactive multitouch tables for the Cooper Hewitt, Smithsonian Design Museum
   </div>
 
-  <a class="project" href="/clouds">Clouds Documentary</a>
-  <div id="project_sub2_div">
-  Interactive (VR) documentary exploring code and creativity
-  </div>
-
   <a class="project" href="/feet.html">Feet : VR System</a>
   <div id="project_sub2_div">
-  Virtual Reality system for parkinson's disease patients
+  Virtual Reality system for parkinson's disease patients.
   </div>
 
   <a class="project" href="/gogoam">GOGOAM</a>
@@ -39,17 +18,12 @@
 
   <a class="project" href="/tweakmode">Tweak Mode</a>
   <div id="project_sub2_div">
-  Realtime code tweaking mode for Processing
+  Realtime code tweaking mode for Processing.
   </div>
 
   <a class="project" href="/makeaplay">Make a Play</a>
   <div id="project_sub2_div">
-  Electronic puppet theater
-  </div>
-
-  <a class="project" href="/turnout">If it should turn out to be true</a>
-  <div id="project_sub2_div">
-  Two video loops on adjacent screens: 00:04:17; 00:02:48
+  Electronic puppet theater.
   </div>
 
   <a class="project" href="/repaint">Re:Paint</a>
@@ -59,12 +33,12 @@
 
   <a class="project" href="/videoactive">VideoActive</a>
   <div id="project_sub2_div">
-  Parametric Design online application
+  Parametric Design online application.
   </div>
 
   <a class="project" href="/echo_garden.html">Echo Garden</a>
   <div id="project_sub2_div">
-  Humorous Interactive Musical Installation
+  Humorous Interactive Musical Installation.
   </div>
 
   <a class="project" href="/flapchat">FlapChat</a>
@@ -74,35 +48,36 @@
 
   <a class="project" href="/blow.html">Blow : UI Design</a>
   <div id="project_sub2_div">
-  User Interface system for the armless
+  User Interface system for the armless.
   </div>
 
   <a class="project" href="/dmw96.html">XpndR III SDK : embedded</a>
   <div id="project_sub2_div">
-  Embedded linux development
+  Embedded linux development.
   </div>
 
   <a class="project" href="/tent_city.html">TLV TeleTent</a>
   <div id="project_sub2_div">
-  Telepresence tent to support the social justice protest
+  Telepresence tent to support the social justice protest.
   </div>
   <a class="project" href="/whereisyourcat.html">WhereIsYourCat?</a>
   <div id="project_sub2_div">
-  Street Radio in Tel Aviv using barcodes
+  Street Radio in Tel Aviv using barcodes.
   </div>
   <a class="project" href="/arwars.html">AR wars</a>
   <div id="project_sub2_div">
-  8086 Assembly language programming game
+  8086 Assembly language programming game.
   </div>
   <a class="project" href="/processing.html">Processing</a>
   <div id="project_sub2_div">
-  Experimentations with Processing
+  Experimentations with Processing.
   </div>
   <br />
   <br />
+  <a class="project" href="/index.html">About me</a>
+  <a class="project" href="/cv.html">CV</a>
   <br />
   <br />
   <br />
 </div>
 
-<div id="canvas"> </div>
