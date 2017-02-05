@@ -8,7 +8,7 @@ var stem;
 var mousePress;
 
 function setup() {
-  var canvas = createCanvas(900, 300);
+  var canvas = createCanvas(600, 300);
   canvas.parent('canvas');
   canvas.position(-400, windowHeight-300);
 
