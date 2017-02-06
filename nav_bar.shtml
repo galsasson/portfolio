@@ -7,6 +7,11 @@
 <div id="nav_bar_div">
   <h5>Projects</h5>
 
+<a class="project" href="/mcny_g3">Future City Lab</a>
+  <div id="project_sub2_div">
+    Interactive exhibit for the Museum of the City of New York
+  </div>
+
 <a class="project" href="/biodesign">Bio Design Studio</a>
   <div id="project_sub2_div">
     Interactive exhibit for The Tech, Museum of Innovation
