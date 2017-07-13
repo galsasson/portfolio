@@ -2,16 +2,128 @@
 /* CSS Document */
 
 body {
-	background-color:#4c4c4c;
+	width: 100%;
+	background-color:#ffffff;
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
 }
 
-div#center_wrapper_div {
-	margin-top: 5%;
+div#portfolio-main {
+	width: 100%;
+	background-color: #0f0;
+	margin-top: 2%;
 	margin-bottom: 5%;
 	margin-left: auto;
 	margin-right: auto;
-	width:900px;
 }
+
+table.menu, tr.menu, td.menu {
+	width: 100%;
+	background-color: #ddd;
+	border-spacing: 0px;
+}
+
+td.menu {
+	width: 25%;
+	height: 200px;
+	padding: 0px;
+	margin: 0px;
+
+	border-width: 1.5px;
+	border-color: #fff;
+	border-style: solid;
+}
+
+td#name {
+	background-color: #fff;
+	padding: 0px;
+	vertical-align: top;
+}
+
+p#galsasson {
+	font-weight: 700;
+	margin: 0px;
+	padding: 0px;
+}
+
+p#portfolio {
+	padding: 0px;
+}
+
+div#mcny {
+	background: url(img/future-city-lab.jpg) 50% 50% no-repeat;
+	background-size: 150%;
+	width: 100%;
+	height: 100%;
+}
+
+div#biodesign {
+	background: url(img/biodesign.jpg) 50% 50% no-repeat;
+	background-size: 150%;
+	width: 100%;
+	height: 100%;
+}
+
+div#one-world {
+	background: url(img/one-world.jpg) 50% 50% no-repeat;
+	background-size: 230%;
+	width: 100%;
+	height: 100%;
+}
+
+div#clouds {
+	background: url(img/clouds.jpeg) 70% 50% no-repeat;
+	background-size: 230%;
+	width: 100%;
+	height: 100%;
+}
+
+div#cooper-hewitt {
+	background: url(img/cooper.jpg) 50% 50% no-repeat;
+	background-size: 180%;
+	width: 100%;
+	height: 100%;
+}
+
+div#makeaplay {
+	background: url(img/makeaplay.jpg) 50% 50% no-repeat;
+	background-size: 180%;
+	width: 100%;
+	height: 100%;
+}
+
+div#duet {
+	background: url(img/duet3.png) 50% 30% no-repeat;
+	background-size: 250%;
+	width: 100%;
+	height: 100%;
+}
+
+div#gogoam {
+	background: url(img/gogoam.png) 60% 42% no-repeat;
+	background-size: 600%;
+	width: 100%;
+	height: 100%;
+}
+
+div#tweakmode {
+	background: url(img/tweakmode.png) 26% 42% no-repeat;
+	background-size: 600%;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
 
 div#main_div {
 /*	margin-top:5%;
