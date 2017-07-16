@@ -1,39 +1,97 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body {
-	width: 100%;
-	background-color:#ffffff;
-	font-family: brandon-grotesque, sans-serif;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 18px;
+:root {
+	--inactive: brightness(100%);
+	--active: brightness(130%);
 }
 
-div#portfolio-main {
-	width: 100%;
-	background-color: #0f0;
-	margin-top: 2%;
-	margin-bottom: 5%;
+body {
+	width: 80%;
+	background-color:#ffffff;
+	font-family: 'Maven Pro', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	margin-top: 69px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+div#portfolio-main {
+	width: 100%;
+	background-color: #fff;
+}
+
 table.menu, tr.menu, td.menu {
 	width: 100%;
-	background-color: #ddd;
+	background-color: #fff;
 	border-spacing: 0px;
 }
 
 td.menu {
-	width: 25%;
-	height: 200px;
+	width: 20%;
+	height: 260px;
 	padding: 0px;
 	margin: 0px;
+	vertical-align: top;
 
 	border-width: 1.5px;
 	border-color: #fff;
 	border-style: solid;
+}
+
+.inactive {
+	/* grayscale */
+	-webkit-animation: toinactive 0.5s 1;
+	-webkit-filter: var(--inactive); /* Safari 6.0 - 9.0 */
+	filter: var(--inactive);
+	color: rgba(0, 0, 0, 0);
+	background-color: rgba(0,0,0,0);
+	padding: 0px;
+	margin: 0px;
+}
+
+@-webkit-keyframes toinactive {
+	0% {
+		-webkit-filter: var(--active); /* Safari 6.0 - 9.0 */
+	    filter: var(--active);	
+		color: rgba(0, 0, 0, 1);
+	}
+	100% {
+		-webkit-filter: var(--inactive); /* Safari 6.0 - 9.0 */
+	    filter: var(--inactive);	
+		color: rgba(0, 0, 0, 0);
+	}
+}
+
+.active {
+	-webkit-animation: toactive 0.5s 1;
+	-webkit-filter: var(--active); /* Safari 6.0 - 9.0 */
+	filter: var(--active);	
+	color: rgba(0, 0, 0, 1);
+	background-color: rgba(255, 255, 255, 1);
+	padding: 0px;
+	margin: 0px;
+}
+
+@-webkit-keyframes toactive {
+	0% {
+		-webkit-filter: var(--inactive); /* Safari 6.0 - 9.0 */
+	    filter: var(--inactive);	
+		color: rgba(0, 0, 0, 0);
+		background-color: rgba(0,0,0,0);
+	}
+	100% {
+		-webkit-filter: var(--active); /* Safari 6.0 - 9.0 */
+	    filter: var(--active);	
+		color: rgba(0, 0, 0, 1);
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+
+.hidden {
+	visibility: hidden;
 }
 
 td#name {
@@ -52,217 +110,83 @@ p#portfolio {
 	padding: 0px;
 }
 
+p#about {
+	vertical-align: bottom;
+}
+
+p#more {
+	padding: 0px;
+	margin-top: 0px;
+	/*display: inline-block;*/
+	vertical-align: top;
+	text-align: right;
+}
+
+p.info {
+	padding: 0px;
+	margin: 0px;
+}
+
 div#mcny {
 	background: url(img/future-city-lab.jpg) 50% 50% no-repeat;
-	background-size: 150%;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
 
 div#biodesign {
 	background: url(img/biodesign.jpg) 50% 50% no-repeat;
-	background-size: 150%;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
 
 div#one-world {
-	background: url(img/one-world.jpg) 50% 50% no-repeat;
-	background-size: 230%;
+	background: url(img/one-world.jpg) 49% 50% no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
 
 div#clouds {
 	background: url(img/clouds.jpeg) 70% 50% no-repeat;
-	background-size: 230%;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
 
 div#cooper-hewitt {
 	background: url(img/cooper.jpg) 50% 50% no-repeat;
-	background-size: 180%;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
 
 div#makeaplay {
 	background: url(img/makeaplay.jpg) 50% 50% no-repeat;
-	background-size: 180%;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
 
 div#duet {
-	background: url(img/duet3.png) 50% 30% no-repeat;
-	background-size: 250%;
+	background: url(img/duet.jpg) 50% 30% no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
 
 div#gogoam {
-	background: url(img/gogoam.png) 60% 42% no-repeat;
+	background: url(img/gogoam.jpg) 60% 42% no-repeat;
 	background-size: 600%;
 	width: 100%;
 	height: 100%;
 }
 
 div#tweakmode {
-	background: url(img/tweakmode.png) 26% 42% no-repeat;
+	background: url(img/tweakmode.jpg) 26% 42% no-repeat;
 	background-size: 600%;
 	width: 100%;
 	height: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-div#main_div {
-/*	margin-top:5%;
-	margin-left: auto;
-	margin-right: auto; */
-	margin-bottom: 5%;
-	width:1100px;
-	float:left;
-	background-color:#f4f4f4;
-	height: 100%;
-	text-align:left;
-}
-
-div#title_div {
-	float:left;
-	width:1100px;
-
-	border-bottom-color:#4c4c4c;
-	border-bottom-style:solid;
-	border-bottom-width:1px;
-}
-
-div#canvas {
-	background-color:#00000000;
-	position: fixed;
-}
-
-img#corner {
-	float:left;
-}
-
-img#gal_img {
-	padding-top:20px;
-	padding-left:0px;
-	padding-bottom:15px;
-}
-
-div#content_div {
-	float:left;
-	width:700px;
-	height:100%;
-	margin: 0px 0px 0px 0px;
-	padding:0px 20px 20px 20px;
-	color:#4F5456;
-	font-family:"Arial";
-	font-size:16px;
-
-}
-
-div#nav_bar_div {
-	float:left;
-	width:200px;
-	height:100%;
-	padding-left:0px;
-	padding-right:1px;
-
-	border-right-color:#4c4c4c;
-	border-right-style:solid;
-	border-right-width:1px;
-}
-
-div#project_sub2_div {
-	vertical-align:top;
-	color:#ACB4B7;
-	font-family:Arial;
-	font-size:13px;
-	margin-left:12px;
-	margin-right:12px;
-
-}
-
-a.project {
-  display: block;
-  color:#4F5456;
-  font-family:Arial;
-  font-size:15px;
-  text-decoration: none;
-  margin-top:20px;
-  margin-left:10px;
-  margin-bottom:5px;
-}
-
-a.project:hover {
-	text-decoration:underline;
-}
-
-h1 {
-	font-family:"Arial";
-	font-size:20px;
-	color:#4F5456;
-/*	background-color:#4F5456; */
-}
-
-h2 {
-	font-family:"Arial";
-	font-size:16px;
-	/*color:#ACB4B7;*/
-	color:#5F6466;
-/*	background-color:#4F5456; */
-}
-
-h3 {
-	font-family:"Arial";
-	font-size:14px;
-	color:#5F6466;
-}
-
-h5 {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-left: 0px;
-	margin-bottom: 40px;
-	padding: 4px 0px 4px 10px;
-	font-style:normal;
-	text-decoration:none;
-	font-weight:100;
-	font-family:"Arial";
-	font-size:14px;
-	background-color:#4F5456;
-	color:#ACB4B7
-}
-
-canvas.photo_gallery {
-	position:relative;
-}
-
-a {
-	color:#eda60d;
-	text-decoration:none;
-}
-
-ul {
-	margin-top:3px;
-}
-
-div.processing_sketch {
-	width: 100%;
-	padding: 10px 10px 10px 10px;
-	background-color: #3d3d3d;
-}
-
 

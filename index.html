@@ -5,6 +5,8 @@
 <meta name='description' content='Gal Sasson personal portfolio' />
 <title>Gal : portfolio</title>
 
+<!-- <link href="https://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" rel="stylesheet">
 <link rel='stylesheet' href='style.css' type='text/css' media='screen' />
 
 <!-- Google Analytics -->
@@ -20,32 +22,81 @@
 </script>
 <!-- Google Analytics End -->
 
+<script src='js/jquery-3.2.1.min.js'></script>
+
 </head>
 
 <body>
 
 <div id='portfolio-main'>
 
-<table class='menu'>
+<table class='menu' id='projects_table'>
 	<tr class='menu'>
-		<td class='menu' id='name'><p id='galsasson'>Gal Sasson</p><p id='portfolio'>portfolio</p></td>
-		<td class='menu'><div id='mcny'></div></td>
-		<td class='menu'><div id='biodesign'></div></td>
-		<td class='menu'><div id='one-world'></div></td>
+		<td class='menu' id='name'><p id='galsasson'>Gal Sasson</p><p id='portfolio'>portfolio</p><p id='about'>about</p></td>
+		<td class='menu'>
+			<div class='inactive imgdiv' id='biodesign'>
+				<p class='info'>BioDesign Studio<br />The Tech Museum<br />Year: 2015</p>
+			</div>
+		</td>
+		<td class='menu'><div class='inactive imgdiv' id='mcny'></div></td>
+		<td class='menu'><div class='inactive imgdiv' id='one-world'></div></td>
 	</tr>
 	<tr class='menu'>
-		<td class='menu'><div id='clouds'></div></td>
-		<td class='menu'><div id='cooper-hewitt'></div></td>
-		<td class='menu'><div id='makeaplay'></div></td>
-		<td class='menu'><div id='duet'></div></td>
+		<td class='menu'><div class='inactive imgdiv' id='makeaplay'></div></td>
+		<td class='menu'><div class='inactive imgdiv' id='duet'></div></td>
+		<td class='menu'><div class='inactive imgdiv' id='cooper-hewitt'></div></td>
+		<td class='menu'><div class='inactive imgdiv' id='clouds'></div></td>
 	</tr>
-	<tr class='menu'>
-		<td class='menu'><div id='gogoam'></div></td>
-		<td class='menu'><div id='tweakmode'></div></td>
+	<tr class='menu more_rows'>
+		<td class='menu'><div class='inactive imgdiv' id='gogoam'></div></td>
+		<td class='menu'><div class='inactive imgdiv' id='tweakmode'></div></td>
+		<td class='menu'></td>
+		<td class='menu'></td>
 	</tr>
+	<tr class='menu more_tr'>
+		<td class='menu'></td>
+		<td class='menu'></td>
+		<td class='menu'></td>
+		<td class='menu'><p id='more'>more</p></td>
+	</tr>
+
 </table>
 
 </div>
+
+<script>
+// highlight on hover
+$(".imgdiv").mouseenter(function(){
+  $(this).removeClass("inactive");
+  $(this).addClass("active");
+});
+$(".imgdiv").mouseleave(function(){
+  $(this).removeClass("active");
+  $(this).addClass("inactive");
+});
+$(".imgdiv").mousedown(function() {
+	alert($(this).attr('id'));
+});
+
+// click on more
+$('#more').mousedown(function() {
+	if ($(this)[0].innerHTML == "more") {
+		console.log(rows[0].outerHTML);
+		$(rows[0].outerHTML).insertBefore(".more_tr");
+		console.log($(this));
+		$(this)[0].innerHTML = "less";
+	}
+	else {
+		$('.more_rows').remove();
+		$(this)[0].innerHTML = "more";		
+	}
+});
+
+// remove more
+var rows = $('.more_rows');
+$('.more_rows').remove();
+console.log(rows);
+</script>
 
 </body>
 </html>
