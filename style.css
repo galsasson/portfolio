@@ -77,6 +77,8 @@ a {
 
 h1 {
 	font-size: 22px;
+	padding: 0px;
+	margin: 0px;
 }
 
 h4 {
@@ -85,8 +87,6 @@ h4 {
 }
 
 #top-picture-div {
-	/*background: url(img/clouds.jpeg) 100% 70%;*/
-	/*background-position: 20% 80%;*/
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 400px;
@@ -110,16 +110,19 @@ h4 {
 	padding-bottom: 50px;
 }
 
-h1 {
-	padding: 0px;
-	margin: 0px;
+#other-div {
+	margin-top: 100px;
 }
-
 
 table.menu, tr.menu, td.menu {
 	width: 100%;
 	background-color: #fff;
 	border-spacing: 0px;
+}
+
+table.mini {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 td.menu {
@@ -134,52 +137,54 @@ td.menu {
 	border-style: solid;
 }
 
-.inactive {
+td.mini {
+	height: 180px;
+}
+
+.inactive-anim {
 	/* grayscale */
-	-webkit-animation: toinactive 0.5s 1;
+	-webkit-animation: toinactive 0.4s 1;
 	-webkit-filter: var(--inactive); /* Safari 6.0 - 9.0 */
 	filter: var(--inactive);
-	color: rgba(0, 0, 0, 0);
-	background-color: rgba(0,0,0,0);
 	padding: 0px;
 	margin: 0px;
 }
 
-@-webkit-keyframes toinactive {
+.inactive {
+	/* grayscale */
+	-webkit-filter: var(--inactive); /* Safari 6.0 - 9.0 */
+	filter: var(--inactive);
+	padding: 0px;
+	margin: 0px;
+}
+
+@keyframes toinactive {
 	0% {
 		-webkit-filter: var(--active); /* Safari 6.0 - 9.0 */
 	    filter: var(--active);	
-		color: rgba(0, 0, 0, 1);
 	}
 	100% {
 		-webkit-filter: var(--inactive); /* Safari 6.0 - 9.0 */
 	    filter: var(--inactive);	
-		color: rgba(0, 0, 0, 0);
 	}
 }
 
 .active {
-	-webkit-animation: toactive 0.5s 1;
+	animation: toactive 0.4s 1;
 	-webkit-filter: var(--active); /* Safari 6.0 - 9.0 */
 	filter: var(--active);	
-	color: rgba(0, 0, 0, 1);
-	background-color: rgba(255, 255, 255, 1);
 	padding: 0px;
 	margin: 0px;
 }
 
-@-webkit-keyframes toactive {
+@keyframes toactive {
 	0% {
 		-webkit-filter: var(--inactive); /* Safari 6.0 - 9.0 */
 	    filter: var(--inactive);	
-		color: rgba(0, 0, 0, 0);
-		background-color: rgba(0,0,0,0);
 	}
 	100% {
 		-webkit-filter: var(--active); /* Safari 6.0 - 9.0 */
 	    filter: var(--active);	
-		color: rgba(0, 0, 0, 1);
-		background-color: rgba(255, 255, 255, 1);
 	}
 }
 
@@ -190,7 +195,7 @@ td.menu {
 td#name {
 	position: relative;
 	background-color: #fff;
-	padding: 0px;
+	padding: 2px;
 	vertical-align: top;
 }
 
@@ -221,10 +226,63 @@ p#more {
 	text-align: right;
 }
 
-p.info {
+div.info {
+	position: relative;
+	line-height: 1.3;
 	padding: 0px;
 	margin: 0px;
+	font-size: 14px;
+	height: 100%;
+	vertical-align: bottom;
 }
+
+p.info {
+	position: absolute;
+	padding: 6px;
+	margin: 0px;
+	font-size: 14px;
+	bottom: 0px;
+}
+
+span.info {
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #fff;
+}
+
+.transparent {
+	opacity: 0;
+}
+
+.transparent-anim {
+	animation: totransparent 0.4s 1;
+	opacity: 0;
+}
+
+.opaque-anim {
+	animation: toopaque 1s 1;
+	opacity: 1;
+}
+
+@keyframes totransparent {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes toopaque {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
 
 div#mcny {
 	background: url(img/future-city-lab.jpg) 50% 50% no-repeat;

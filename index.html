@@ -27,23 +27,55 @@
 <table class='menu' id='projects_table'>
 	<tr class='menu'>
 		<td class='menu' id='name'><p id='galsasson'>Gal Sasson</p><p id='portfolio'>portfolio</p><p id='about'>about</p></td>
-		<td class='menu'>
-			<div class='inactive imgdiv' id='biodesign'>
-				<p class='info'>BioDesign Studio<br />The Tech Museum<br />Year: 2015</p>
+		<td class='menu'><div class='inactive imgdiv' id='biodesign' data-page='biodesign/'>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>BioDesign Studio, 2016</b></span></p>
 			</div>
-		</td>
-		<td class='menu'><div class='inactive imgdiv' id='mcny'></div></td>
-		<td class='menu'><div class='inactive imgdiv' id='one-world'></div></td>
+		</div></td>
+		<td class='menu'><div class='inactive imgdiv' id='mcny' data-page='mcny_g3/'>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>Future City Lab, 2016</b></span></p>
+			</div>
+		</div></td>
+		<td class='menu'><div class='inactive imgdiv' id='one-world' data-page='one-world-observatory/'>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>City Pulse, 2015</b></span></p>
+			</div>			
+		</div></td>
 	</tr>
 	<tr class='menu'>
-		<td class='menu'><div class='inactive imgdiv' id='makeaplay'></div></td>
-		<td class='menu'><div class='inactive imgdiv' id='duet'></div></td>
-		<td class='menu'><div class='inactive imgdiv' id='cooper-hewitt'></div></td>
-		<td class='menu'><div class='inactive imgdiv' data-page='clouds/' id='clouds'></div></td>
+		<td class='menu'><div class='inactive imgdiv' id='makeaplay' data-page='makeaplay/'>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>Make a play, 2013</b></span></p>
+			</div>						
+		</div></td>
+		<td class='menu'><div class='inactive imgdiv' id='duet' data-page=''>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>Duet for sketcher and coder, 2014</b></span></p>
+			</div>									
+		</div></td>
+		<td class='menu'><div class='inactive imgdiv' id='cooper-hewitt' data-page='collections-table/'>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>Collections Table, 2015</b></span></p>
+			</div>												
+		</div></td>
+		<td class='menu'><div class='inactive imgdiv' id='clouds' data-page='clouds/'>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>Clouds Documentary, 2014</b></span></p>
+			</div>															
+		</div></td>
 	</tr>
 	<tr class='menu more_rows'>
-		<td class='menu'><div class='inactive imgdiv' id='gogoam'></div></td>
-		<td class='menu'><div class='inactive imgdiv' id='tweakmode'></div></td>
+		<td class='menu'><div class='inactive imgdiv' id='gogoam' data-page='gogoam/'>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>Gogoam, 2013</b></span></p>
+			</div>																		
+		</div></td>
+		<td class='menu'><div class='inactive imgdiv' id='tweakmode' data-page='tweakmode/'>
+			<div class='info transparent'>
+				<p class='info'><span class='info'><b>Tweak Mode (for Processing), 2013</b></span></p>
+			</div>																					
+		</div></td>
 		<td class='menu'></td>
 		<td class='menu'></td>
 	</tr>
@@ -59,14 +91,26 @@
 
 <script>
 // highlight on hover
-function regListeners() {
+function regMouseListeners() {
 $(".imgdiv").mouseenter(function(){
   $(this).removeClass("inactive");
+  $(this).removeClass("inactive-anim");
   $(this).addClass("active");
 });
 $(".imgdiv").mouseleave(function(){
   $(this).removeClass("active");
-  $(this).addClass("inactive");
+  $(this).addClass("inactive-anim");
+});
+
+// show details on hover
+$("div.info").mouseenter(function() {
+	$(this).removeClass("transparent");
+	$(this).removeClass("transparent-anim");
+	$(this).addClass("opaque-anim");
+});
+$("div.info").mouseleave(function() {
+	$(this).removeClass("opaque-anim");
+	$(this).addClass("transparent-anim");
 });
 // click on a project
 $(".imgdiv").mousedown(function() {
@@ -74,17 +118,15 @@ $(".imgdiv").mousedown(function() {
 	window.location = page;
 });
 }
-regListeners();
+regMouseListeners();
 
 
 // click on more
 $('#more').mousedown(function() {
 	if ($(this)[0].innerHTML == "more") {
-		// console.log(rows[0].outerHTML);
 		$(rows[0].outerHTML).insertBefore(".more_tr");
-		// console.log($(this));
 		$(this)[0].innerHTML = "less";
-		regListeners();
+		regMouseListeners();
 	}
 	else {
 		$('.more_rows').remove();
@@ -95,7 +137,6 @@ $('#more').mousedown(function() {
 // remove more
 var rows = $('.more_rows');
 $('.more_rows').remove();
-// console.log(rows);
 
 </script>
 

@@ -117,6 +117,25 @@ var topImgSize = "120%"
     <div id='other-div'>
       <hr />
       <div id='mini-menu'>
+        <table class='menu mini' id='projects_table'>
+          <tr class='menu'>
+            <td class='menu mini'><div class='inactive imgdiv' id='biodesign' data-page='../biodesign/'>
+              <div class='info transparent'>
+                <p class='info'><span class='info'><b>BioDesign Studio, 2016</b></span></p>
+              </div>
+            </div></td>
+            <td class='menu mini'><div class='inactive imgdiv' id='mcny' data-page='../mcny_g3/'>
+              <div class='info transparent'>
+                <p class='info'><span class='info'><b>Future City Lab, 2016</b></span></p>
+              </div>
+            </div></td>
+            <td class='menu mini'><div class='inactive imgdiv' id='one-world' data-page='../one-world-observatory/'>
+              <div class='info transparent'>
+                <p class='info'><span class='info'><b>City Pulse, 2015</b></span></p>
+              </div>      
+            </div></td>
+          </tr>
+        </table>
       </div>
       <hr />
       <h1><a href='..'>Back to portfolio</a></h1>
@@ -125,12 +144,39 @@ var topImgSize = "120%"
 </div>  <!-- project-page -->
 
 <script>
-console.log($('#top-picture-div'));
 $('#top-picture-div').css('background-image', 'url(' + topImgUrl + ')');
 $('#top-picture-div').css('background-position', topImgPos);
 $('#top-picture-div').css('background-size', topImgSize);
-// $('#top-picture-div')[0].style.backgroundImage.set('../img/clouds-top.jpg');
-// console.log($('#top-picture-div')[0].style.backgroundImage);
+
+
+function regMouseListeners() {
+$(".imgdiv").mouseenter(function(){
+  $(this).removeClass("inactive");
+  $(this).removeClass("inactive-anim");
+  $(this).addClass("active");
+});
+$(".imgdiv").mouseleave(function(){
+  $(this).removeClass("active");
+  $(this).addClass("inactive-anim");
+});
+
+// show details on hover
+$("div.info").mouseenter(function() {
+  $(this).removeClass("transparent");
+  $(this).removeClass("transparent-anim");
+  $(this).addClass("opaque-anim");
+});
+$("div.info").mouseleave(function() {
+  $(this).removeClass("opaque-anim");
+  $(this).addClass("transparent-anim");
+});
+// click on a project
+$(".imgdiv").mousedown(function() {
+  var page = $(this).data('page');
+  window.location = page;
+});
+}
+regMouseListeners();
 </script>
 
 </body>
