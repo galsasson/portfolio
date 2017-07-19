@@ -83,7 +83,7 @@
 		<td class='menu'></td>
 		<td class='menu'></td>
 		<td class='menu'></td>
-		<td class='menu'><p id='more'>more</p></td>
+		<td class='menu'><p id='more'><span id='more-span'>more</span></p></td>
 	</tr>
 
 </table>
@@ -122,7 +122,7 @@ regMouseListeners();
 
 
 // click on more
-$('#more').mousedown(function() {
+$('#more-span').mousedown(function() {
 	if ($(this)[0].innerHTML == "more") {
 		$(rows[0].outerHTML).insertBefore(".more_tr");
 		$(this)[0].innerHTML = "less";
@@ -130,7 +130,7 @@ $('#more').mousedown(function() {
 	}
 	else {
 		$('.more_rows').remove();
-		$(this)[0].innerHTML = "more";		
+		$(this)[0].innerHTML = "more";
 	}
 });
 

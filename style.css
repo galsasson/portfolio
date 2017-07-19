@@ -220,10 +220,14 @@ p#more {
 	padding: 0px;
 	margin-top: 0px;
 	font-size: 14px;
-	cursor: pointer;
+	/*cursor: pointer;*/
 	/*display: inline-block;*/
 	vertical-align: top;
 	text-align: right;
+}
+
+#more-span {
+	cursor: pointer;
 }
 
 div.info {
