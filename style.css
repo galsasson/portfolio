@@ -53,6 +53,12 @@ div#portfolio-main {
 	width: 35%;
 }
 
+.inline-img {
+	width: 100%;
+	padding-top: 60px;
+	image-orientation: from-image;
+}
+
 ul {
 	padding-left: 0px;
 	margin-top: 0px;
@@ -98,7 +104,6 @@ h4 {
 
 #prizes-div {
 	font-size: 14px;
-	padding-top: 10px;
 }
 
 #checkout-div {
@@ -200,7 +205,8 @@ td#name {
 }
 
 p#galsasson {
-	font-weight: 700;
+	font-weight: 300;
+	/*font-size: 18px;*/
 	margin: 0px;
 	padding: 0px;
 }
@@ -211,6 +217,8 @@ p#portfolio {
 }
 
 p#about {
+	margin-bottom: 0px;
+	padding-bottom: -4px;
 	position: absolute;
 	bottom: 0px;
 	cursor: pointer;
